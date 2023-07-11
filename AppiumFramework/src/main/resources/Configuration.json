@@ -1,0 +1,6 @@
+{
+  "baseURL": "https://www.askomdch.com/",
+  "accountURL": "https://www.askomdch.com/account/",
+  "envName": "stage",
+  "password": "testuser"
+}
