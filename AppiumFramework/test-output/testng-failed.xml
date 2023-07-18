@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.das.validation.TestService">
+      <class name="com.das.validation.ECommerceValidationExcell">
         <methods>
-          <include name="testService"/>
+          <include name="stopDeviceAndServer"/>
+          <include name="FillForm"/>
+          <include name="tearDownDriver"/>
+          <include name="startServer"/>
+          <include name="startDriver"/>
         </methods>
-      </class> <!-- com.das.validation.TestService -->
+      </class> <!-- com.das.validation.ECommerceValidationExcell -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

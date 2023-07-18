@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -31,13 +31,14 @@ public class ECommerceValidation extends BaseTest {
 
 		double totalSum = cartPage.getProductsSum();
 		double displayFormattedSum = cartPage.getTotalAmountDisplayed();
-		AssertJUnit.assertEquals(totalSum, displayFormattedSum);
+		Assert.assertEquals(totalSum, displayFormattedSum);
+		System.out.println(getDriver().getCapabilities().getCapability("avd").toString() + " " + input.get("name"));
 		cartPage.acceptTermsConditions();
 		cartPage.submitOrder();
 
 	}
 
-	@DataProvider // (parallel = true)
+	@DataProvider(parallel = true)
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonData(
 				System.getProperty("user.dir") + "//src//main//resources//eCommerce.json");

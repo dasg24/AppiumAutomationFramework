@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
+
+import com.das.datastructure.CircularQueue;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -16,7 +17,8 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 public class DriverManager {
 
 	protected ThreadLocal<AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
-	// protected ThreadLocal<RemoteWebDriver> remoteDdriver = new ThreadLocal<>();
+	protected ThreadLocal<UiAutomator2Options> options = new ThreadLocal<UiAutomator2Options>();
+	protected ThreadLocal<String> deviceName = new ThreadLocal<String>();
 
 	public AppiumDriver initDriver() throws IOException {
 		Properties prop = new Properties();
@@ -37,15 +39,17 @@ public class DriverManager {
 			switch (platformName) {
 
 			case "android":
-				UiAutomator2Options options = new UiAutomator2Options();
-				options.setDeviceName("Pixel5Appium");
-				options.setCapability("avd", "Pixel5Appium");
-				options.setCapability("avdLaunchTimeout", "180000");
-				String appUrl = System.getProperty("user.dir") + "//src//main//resources//General-Store.apk";
-				options.setApp(appUrl);
 
-				driver.set(new AndroidDriver(new URL(ipAddress), options));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				options.set(new UiAutomator2Options());
+				deviceName.set(CircularQueue.deQueue());
+				System.out.println("deviceName " + deviceName.get());
+				options.get().setDeviceName(deviceName.get());
+				options.get().setCapability("avd", deviceName.get());
+				options.get().setCapability("avdLaunchTimeout", "180000");
+				String appUrl = System.getProperty("user.dir") + "//src//main//resources//General-Store.apk";
+				options.get().setApp(appUrl);
+
+				driver.set(new AndroidDriver(new URL(ipAddress), options.get()));
 
 				break;
 			case "ios":
@@ -58,7 +62,7 @@ public class DriverManager {
 
 		}
 
-		driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver.get();
 
 	}

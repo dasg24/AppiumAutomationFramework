@@ -1,6 +1,6 @@
 package com.das.validation;
 
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,13 +29,15 @@ public class ECommerceValidationExcell extends BaseTest {
 
 		double totalSum = cartPage.getProductsSum();
 		double displayFormattedSum = cartPage.getTotalAmountDisplayed();
-		AssertJUnit.assertEquals(totalSum, displayFormattedSum);
+		Assert.assertEquals(totalSum, displayFormattedSum);
+		System.out.println(
+				getDriver().getCapabilities().getCapability("avd").toString() + " " + customerInfo.getFullName());
 		cartPage.acceptTermsConditions();
 		cartPage.submitOrder();
 
 	}
 
-	@DataProvider // (parallel = true)
+	@DataProvider(parallel = true)
 	public Object[][] getData() throws CloneNotSupportedException {
 
 		DataDrivenExcel dataDrivenExcel = new DataDrivenExcel();

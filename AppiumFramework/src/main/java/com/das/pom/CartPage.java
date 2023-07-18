@@ -64,8 +64,10 @@ public class CartPage extends AndroidActions {
 	}
 
 	public void acceptTermsConditions() {
+		System.out.println("terms " + terms);
 		longPressAction(terms);
 		acceptButton.click();
+
 	}
 
 	public void submitOrder() {
