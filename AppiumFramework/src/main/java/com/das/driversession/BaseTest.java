@@ -12,6 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import com.das.datastructure.CircularQueue;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -27,13 +28,9 @@ public abstract class BaseTest {
 	Semaphore semaphore;// = new Semaphore(3);
 	AVD_DeviceStartStop aVD_DeviceStartStop = new AVD_DeviceStartStop();
 
-	public BaseTest() {
-		try {
-			AVD_DeviceStartStop.getDevicesNames();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	@BeforeSuite
+	public void startAndroidDevices() throws IOException, InterruptedException {
+		AVD_DeviceStartStop.getDevicesNames();
 		System.out.println(CircularQueue.size);
 		semaphore = new Semaphore(CircularQueue.size);
 	}
@@ -70,6 +67,7 @@ public abstract class BaseTest {
 
 	@AfterMethod
 	public void tearDownDriver() throws Exception {
+
 		System.out.println("CURRENT THREAD End: " + Thread.currentThread().getId() + ", " + "DRIVER = " + getDriver());
 		CircularQueue.enQueue(getDriver().getCapabilities().getCapability("avd").toString());
 		getDriver().quit();
