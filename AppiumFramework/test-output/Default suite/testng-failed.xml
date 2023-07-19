@@ -9,6 +9,7 @@
           <include name="FillForm"/>
           <include name="tearDownDriver"/>
           <include name="startServer"/>
+          <include name="startAndroidDevices"/>
           <include name="startDriver"/>
         </methods>
       </class> <!-- com.das.validation.ECommerceValidationExcell -->

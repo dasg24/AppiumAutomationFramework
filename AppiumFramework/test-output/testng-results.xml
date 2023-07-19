@@ -2,112 +2,116 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-17T20:51:52 EDT" name="Default suite" finished-at="2023-07-17T20:53:48 EDT" duration-ms="116227">
+  <suite started-at="2023-07-18T22:34:02 EDT" name="Default suite" finished-at="2023-07-18T22:35:33 EDT" duration-ms="90675">
     <groups>
     </groups>
-    <test started-at="2023-07-17T20:51:52 EDT" name="Default test" finished-at="2023-07-17T20:53:48 EDT" duration-ms="116227">
+    <test started-at="2023-07-18T22:34:02 EDT" name="Default test" finished-at="2023-07-18T22:35:33 EDT" duration-ms="90675">
       <class name="com.das.validation.ECommerceValidationExcell">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:51:52 EDT" name="startServer" finished-at="2023-07-17T20:52:04 EDT" duration-ms="12036" status="PASS">
+        <test-method is-config="true" signature="startAndroidDevices()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:02 EDT" name="startAndroidDevices" finished-at="2023-07-18T22:34:02 EDT" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAndroidDevices -->
+        <test-method is-config="true" signature="startServer()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:02 EDT" name="startServer" finished-at="2023-07-18T22:34:13 EDT" duration-ms="10929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startServer -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:52:05 EDT" name="startDriver" finished-at="2023-07-17T20:53:28 EDT" duration-ms="83158" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:14 EDT" name="startDriver" finished-at="2023-07-18T22:34:30 EDT" duration-ms="15943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:52:05 EDT" name="startDriver" finished-at="2023-07-17T20:53:14 EDT" duration-ms="68847" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:14 EDT" name="startDriver" finished-at="2023-07-18T22:34:29 EDT" duration-ms="14575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:52:05 EDT" name="startDriver" finished-at="2023-07-17T20:53:01 EDT" duration-ms="55427" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:14 EDT" name="startDriver" finished-at="2023-07-18T22:34:32 EDT" duration-ms="18182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:52:05 EDT" name="startDriver" finished-at="2023-07-17T20:52:52 EDT" duration-ms="47342" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:14 EDT" name="startDriver" finished-at="2023-07-18T22:35:09 EDT" duration-ms="54531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:52:52 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-17T20:53:15 EDT" duration-ms="22593" status="PASS">
+        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:29 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-18T22:34:58 EDT" duration-ms="29200" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@499a53fb]]>
+                <![CDATA[com.das.pojo.CustomerInfo@48e5e103]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@19a055e8]]>
+                <![CDATA[com.das.pojo.CustomerInfo@5f2ab8e8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:01 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-17T20:53:33 EDT" duration-ms="32889" status="PASS">
+        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:30 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-18T22:35:05 EDT" duration-ms="35138" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@209cc7fa]]>
+                <![CDATA[com.das.pojo.CustomerInfo@70208460]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@a7f9f43]]>
+                <![CDATA[com.das.pojo.CustomerInfo@f8b0926]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:14 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-17T20:53:44 EDT" duration-ms="30380" status="PASS">
+        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:32 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-18T22:35:00 EDT" duration-ms="27317" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@7779dcfb]]>
+                <![CDATA[com.das.pojo.CustomerInfo@4799751a]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@6e235543]]>
+                <![CDATA[com.das.pojo.CustomerInfo@57cdc58c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:15 EDT" name="tearDownDriver" finished-at="2023-07-17T20:53:17 EDT" duration-ms="1876" status="PASS">
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:34:58 EDT" name="tearDownDriver" finished-at="2023-07-18T22:35:00 EDT" duration-ms="1899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownDriver -->
-        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:28 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-17T20:53:47 EDT" duration-ms="18295" status="PASS">
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:35:00 EDT" name="tearDownDriver" finished-at="2023-07-18T22:35:01 EDT" duration-ms="1371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:35:05 EDT" name="tearDownDriver" finished-at="2023-07-18T22:35:06 EDT" duration-ms="660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownDriver -->
+        <test-method signature="FillForm(com.das.pojo.CustomerInfo,com.das.pojo.CustomerInfo)[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:35:09 EDT" name="FillForm" data-provider="getData" finished-at="2023-07-18T22:35:32 EDT" duration-ms="23218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@716157e0]]>
+                <![CDATA[com.das.pojo.CustomerInfo@624bc1dc]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.das.pojo.CustomerInfo@580f82e1]]>
+                <![CDATA[com.das.pojo.CustomerInfo@679542eb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:33 EDT" name="tearDownDriver" finished-at="2023-07-17T20:53:35 EDT" duration-ms="1180" status="PASS">
+        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:35:32 EDT" name="tearDownDriver" finished-at="2023-07-18T22:35:33 EDT" duration-ms="1031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownDriver -->
-        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:44 EDT" name="tearDownDriver" finished-at="2023-07-17T20:53:45 EDT" duration-ms="781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownDriver -->
-        <test-method is-config="true" signature="tearDownDriver()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:47 EDT" name="tearDownDriver" finished-at="2023-07-17T20:53:48 EDT" duration-ms="1039" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownDriver -->
-        <test-method is-config="true" signature="stopDeviceAndServer()[pri:0, instance:com.das.validation.ECommerceValidationExcell@792b749c]" started-at="2023-07-17T20:53:48 EDT" name="stopDeviceAndServer" finished-at="2023-07-17T20:53:48 EDT" duration-ms="714" status="PASS">
+        <test-method is-config="true" signature="stopDeviceAndServer()[pri:0, instance:com.das.validation.ECommerceValidationExcell@451001e5]" started-at="2023-07-18T22:35:33 EDT" name="stopDeviceAndServer" finished-at="2023-07-18T22:35:33 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDeviceAndServer -->

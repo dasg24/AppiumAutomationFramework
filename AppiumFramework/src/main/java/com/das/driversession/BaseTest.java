@@ -33,6 +33,7 @@ public abstract class BaseTest {
 		AVD_DeviceStartStop.getDevicesNames();
 		System.out.println(CircularQueue.size);
 		semaphore = new Semaphore(CircularQueue.size);
+		// EmulatorStarter.start();
 	}
 
 	public AppiumDriverLocalService getService() {
@@ -61,7 +62,6 @@ public abstract class BaseTest {
 
 		semaphore.acquire();
 		setDriver(new DriverManager().initDriver());
-		aVD_DeviceStartStop.startEmulatorDevices(getDriver().getCapabilities().getCapability("avd").toString());
 
 	}
 
@@ -79,7 +79,7 @@ public abstract class BaseTest {
 	public void stopDeviceAndServer() throws Exception {
 		getService().close();
 		driver.remove();
-		aVD_DeviceStartStop.stopEmulatorDevices();
+		// aVD_DeviceStartStop.stopEmulatorDevices();
 	}
 
 	public AppiumDriverLocalService startAppiumServer(String ipAddress, int port) {
