@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 18 22:34:02 EDT 2023</td>
+<td>Started on:</td><td>Wed Jul 19 11:26:20 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90675 ms)</td>
+<tr><td>Total time:</td><td>70 seconds (70594 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,69 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@ecdf789, com.das.pojo.CustomerInfo@61229e53<br/>
+<a href="#Output-598039349" onClick='toggleBox("Output-598039349", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-598039349" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-598039349">
+<a href='C:\Users\goura\git\repository\AppiumFramework\Screenshots\ANDROID_Pixel6Appium\2023-07-19-11-27-15\ECommerceValidationExcell\FillForm.png'> <img src='C:\Users\goura\git\repository\AppiumFramework\Screenshots\ANDROID_Pixel6Appium\2023-07-19-11-27-15\ECommerceValidationExcell\FillForm.png' height='400' width='400'/> </a><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.das.validation.ECommerceValidationExcell.FillForm(ECommerceValidationExcell.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div><a href='#' onClick='toggleBox("stack-trace598039349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace598039349'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.das.validation.ECommerceValidationExcell.FillForm(ECommerceValidationExcell.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.das.validation.ECommerceValidationExcell@24569dba</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,25 +138,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@624bc1dc, com.das.pojo.CustomerInfo@679542eb</td>
+<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@681947d6, com.das.pojo.CustomerInfo@37edae58</td>
 <td></td>
-<td>23</td>
-<td>com.das.validation.ECommerceValidationExcell@451001e5</td></tr>
+<td>18</td>
+<td>com.das.validation.ECommerceValidationExcell@24569dba</td></tr>
 <tr>
-<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@48e5e103, com.das.pojo.CustomerInfo@5f2ab8e8</td>
+<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@7955c943, com.das.pojo.CustomerInfo@2d0e14a</td>
 <td></td>
-<td>29</td>
-<td>com.das.validation.ECommerceValidationExcell@451001e5</td></tr>
+<td>21</td>
+<td>com.das.validation.ECommerceValidationExcell@24569dba</td></tr>
 <tr>
-<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@4799751a, com.das.pojo.CustomerInfo@57cdc58c</td>
+<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@16b12bb4, com.das.pojo.CustomerInfo@57548a74</td>
 <td></td>
-<td>27</td>
-<td>com.das.validation.ECommerceValidationExcell@451001e5</td></tr>
-<tr>
-<td title='com.das.validation.ECommerceValidationExcell.FillForm()'><b>FillForm</b><br>Test class: com.das.validation.ECommerceValidationExcell<br>Parameters: com.das.pojo.CustomerInfo@70208460, com.das.pojo.CustomerInfo@f8b0926</td>
-<td></td>
-<td>35</td>
-<td>com.das.validation.ECommerceValidationExcell@451001e5</td></tr>
+<td>22</td>
+<td>com.das.validation.ECommerceValidationExcell@24569dba</td></tr>
 </table><p>
 </body>
 </html>

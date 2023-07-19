@@ -8,12 +8,15 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 
 import org.apache.commons.io.FileUtils;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
+import com.das.common.functions.Common_Functions;
 import com.das.datastructure.CircularQueue;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,9 +25,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
+@Listeners(com.das.driversession.TestListener.class)
 public abstract class BaseTest {
 	protected ThreadLocal<AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
 	protected ThreadLocal<AppiumDriverLocalService> service = new ThreadLocal<AppiumDriverLocalService>();
+	protected ThreadLocal<String> dateTime = new ThreadLocal<String>();
+
 	Semaphore semaphore;// = new Semaphore(3);
 	AVD_DeviceStartStop aVD_DeviceStartStop = new AVD_DeviceStartStop();
 
@@ -52,22 +58,32 @@ public abstract class BaseTest {
 		return this.driver.get();
 	}
 
+	public String getDateTime() {
+		return this.dateTime.get();
+	}
+
+	public void setDateTime(String dateTime) {
+		this.dateTime.set(dateTime);
+	}
+
 	@BeforeClass
 	public void startServer() throws Exception {
 		startAppiumServer("127.0.0.1", 4723);
+
 	}
 
 	@BeforeMethod
-	public void startDriver() throws Exception {
+	public void startDriver(ITestContext context) throws Exception {
 
 		semaphore.acquire();
 		setDriver(new DriverManager().initDriver());
+		setDateTime(Common_Functions.dateTime());
+		setITestContext(context);
 
 	}
 
 	@AfterMethod
 	public void tearDownDriver() throws Exception {
-
 		System.out.println("CURRENT THREAD End: " + Thread.currentThread().getId() + ", " + "DRIVER = " + getDriver());
 		CircularQueue.enQueue(getDriver().getCapabilities().getCapability("avd").toString());
 		getDriver().quit();
@@ -99,8 +115,13 @@ public abstract class BaseTest {
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
 				new TypeReference<List<HashMap<String, String>>>() {
 				});
-
 		return data;
+	}
 
+	private void setITestContext(ITestContext context) {
+		// TODO Auto-generated method stub
+		System.out.println(getDriver());
+		context.setAttribute("AppiumDriver", getDriver());
+		context.setAttribute("DateTime", getDateTime());
 	}
 }
