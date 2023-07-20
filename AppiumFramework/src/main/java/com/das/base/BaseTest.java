@@ -120,7 +120,6 @@ public abstract class BaseTest {
 		context.setAttribute("AppiumDriver", getDriver());
 		context.setAttribute("DateTime", getDateTime());
 		context.setAttribute("PlatformName", getDriver().getCapabilities().getCapability("platformName").toString());
-		context.setAttribute("DeviceName", getDriver().getCapabilities().getCapability("avd").toString());
 		context.setAttribute("ThreadName", getDriver().getCapabilities().getCapability("threadName").toString());
 	}
 

@@ -78,8 +78,7 @@ public class TestListener extends BaseTest implements ITestListener {
 		driver.set((AppiumDriver) context.getAttribute("AppiumDriver"));
 		dateTime.set((String) context.getAttribute("DateTime"));
 		ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
-				.assignCategory(context.getAttribute("PlatformName") + "_" + context.getAttribute("avd") + "_"
-						+ context.getAttribute("ThreadName"));
+				.assignCategory(context.getAttribute("PlatformName") + "_" + context.getAttribute("ThreadName"));
 	}
 
 	@Override

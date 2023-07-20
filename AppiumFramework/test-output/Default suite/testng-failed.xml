@@ -5,12 +5,12 @@
     <classes>
       <class name="com.das.validation.ECommerceValidation">
         <methods>
-          <include name="stopDeviceAndServer"/>
-          <include name="tearDownDriver"/>
-          <include name="startServer"/>
-          <include name="FillForm"/>
-          <include name="startAndroidDevices"/>
           <include name="startDriver"/>
+          <include name="startServer"/>
+          <include name="stopDeviceAndServer"/>
+          <include name="FillForm" invocation-numbers="1"/>
+          <include name="startAndroidDevices"/>
+          <include name="tearDownDriver"/>
         </methods>
       </class> <!-- com.das.validation.ECommerceValidation -->
     </classes>
