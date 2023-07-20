@@ -1,0 +1,11 @@
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:34.719 CommonActions:60 - Entering Name Indiana Smith
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:36.037 CommonActions:41 - Clicking on Gender Female
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:36.791 CommonActions:41 - Clicking on Country Selection
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:36.927 AndroidActions:41 - Scrolling to text- Austria
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:43.158 CommonActions:41 - Clicking on Shop Button
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:44.558 CommonActions:48 - Clicking on AddToCart
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:45.232 CommonActions:41 - Click on cart button
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:47.446 AndroidActions:24 - Long press on element terms
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:49.643 CommonActions:41 - Click on Accept Button
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:50.359 CommonActions:41 - Click on checkbox
+[logsandroid_Pixel6Appium_2023-07-20-19-38-25 INFO ] 2023-07-20 19:38:51.079 CommonActions:41 - Click on proceed

@@ -1,4 +1,4 @@
-package com.das.driversession;
+package com.das.utils;
 
 public class Configuration {
 	private String baseURL;

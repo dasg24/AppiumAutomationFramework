@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.Status;
+import com.das.utils.ExtentReport;
 import com.das.utils.TestUtils;
 
 import io.appium.java_client.AppiumDriver;
@@ -37,12 +39,14 @@ public class CommonActions extends TestUtils {
 	public void click(WebElement e, String msg) {
 		waitForVisibility(e);
 		log().info(msg);
+		ExtentReport.getTest().log(Status.INFO, msg);
 		e.click();
 	}
 
 	public void clickByIndex(List<WebElement> e, int index, String msg) {
 		waitForVisibility(e.get(index));
 		log().info(msg);
+		ExtentReport.getTest().log(Status.INFO, msg);
 		e.get(index).click();
 	}
 
@@ -54,6 +58,7 @@ public class CommonActions extends TestUtils {
 	public void sendKeys(WebElement e, String txt, String msg) {
 		waitForVisibility(e);
 		log().info(msg + " " + txt);
+		ExtentReport.getTest().log(Status.INFO, msg + " " + txt);
 		e.sendKeys(txt);
 	}
 
@@ -73,6 +78,7 @@ public class CommonActions extends TestUtils {
 			break;
 		}
 		log().info(msg + txt);
+		ExtentReport.getTest().log(Status.INFO, msg + txt);
 		return txt;
 	}
 }

@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.das.driversession.BaseTest;
+import com.das.base.BaseTest;
 import com.das.pom.CartPage;
 import com.das.pom.FormPage;
 import com.das.pom.ProductCatalogue;

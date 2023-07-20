@@ -9,6 +9,7 @@
 		<testng.version>7.4.0</testng.version>
 		<apache-poi.version>5.0.0</apache-poi.version>
 		<selenium.version>3.141.59</selenium.version>
+		<extentreports.version>1.2.2</extentreports.version>
 
 	</properties>
   <dependencies>
@@ -78,6 +79,13 @@
 		    <groupId>org.apache.logging.log4j</groupId>
 		    <artifactId>log4j-api</artifactId>
 		    <version>2.20.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+		    <groupId>com.aventstack</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>5.0.8</version>
 		</dependency>
 
 		

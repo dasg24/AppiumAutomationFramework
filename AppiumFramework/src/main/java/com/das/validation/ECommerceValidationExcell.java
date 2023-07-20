@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.das.driversession.BaseTest;
-import com.das.driversession.DataDrivenExcel;
+import com.das.base.BaseTest;
+import com.das.base.DataDrivenExcel;
 import com.das.pojo.CustomerInfo;
 import com.das.pom.CartPage;
 import com.das.pom.FormPage;
@@ -22,7 +22,6 @@ public class ECommerceValidationExcell extends BaseTest {
 		formPage.setCountrySelection(customerInfo.getCountry());
 		formPage.submitForm();
 		ProductCatalogue productCatalogue = new ProductCatalogue(getDriver());
-		productCatalogue.addItemToCartByIndex(0);
 		productCatalogue.addItemToCartByIndex(0);
 		productCatalogue.goToCartPage();
 		CartPage cartPage = new CartPage(getDriver());

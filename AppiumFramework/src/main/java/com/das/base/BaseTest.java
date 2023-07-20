@@ -1,4 +1,4 @@
-package com.das.driversession;
+package com.das.base;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-@Listeners(com.das.driversession.TestListener.class)
+@Listeners(com.das.utils.TestListener.class)
 public abstract class BaseTest {
 	protected ThreadLocal<AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
 	protected ThreadLocal<AppiumDriverLocalService> service = new ThreadLocal<AppiumDriverLocalService>();
@@ -119,6 +119,9 @@ public abstract class BaseTest {
 		System.out.println(getDriver());
 		context.setAttribute("AppiumDriver", getDriver());
 		context.setAttribute("DateTime", getDateTime());
+		context.setAttribute("PlatformName", getDriver().getCapabilities().getCapability("platformName").toString());
+		context.setAttribute("DeviceName", getDriver().getCapabilities().getCapability("avd").toString());
+		context.setAttribute("ThreadName", getDriver().getCapabilities().getCapability("threadName").toString());
 	}
 
 }
