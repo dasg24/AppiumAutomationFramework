@@ -1,5 +1,6 @@
 package com.das.driversession;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -7,7 +8,9 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.ThreadContext;
 
+import com.das.common.functions.Common_Functions;
 import com.das.datastructure.CircularQueue;
 
 import io.appium.java_client.AppiumDriver;
@@ -45,6 +48,8 @@ public class DriverManager {
 				System.out.println("deviceName " + deviceName.get());
 				options.get().setDeviceName(deviceName.get());
 				options.get().setCapability("avd", deviceName.get());
+				options.get().setCapability("threadName", deviceName.get() + "_" + Common_Functions.dateTime());
+				options.get().setCapability("platformName", "Android");
 				options.get().setCapability("avdLaunchTimeout", "180000");
 				String appUrl = System.getProperty("user.dir") + "//src//main//resources//General-Store.apk";
 				options.get().setApp(appUrl);
@@ -59,6 +64,15 @@ public class DriverManager {
 				throw new IllegalStateException("Unexpected value of Browser type");
 
 			}
+
+			String strFile = "logs" + File.separator + platformName + "_"
+					+ driver.get().getCapabilities().getCapability("threadName").toString();
+			File logFile = new File(strFile);
+			if (!logFile.exists()) {
+				logFile.mkdirs();
+			}
+			// route logs to separate file for each thread
+			ThreadContext.put("ROUTINGKEY", strFile);
 
 		}
 

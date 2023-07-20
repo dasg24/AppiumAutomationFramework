@@ -34,14 +34,6 @@ public abstract class BaseTest {
 	Semaphore semaphore;// = new Semaphore(3);
 	AVD_DeviceStartStop aVD_DeviceStartStop = new AVD_DeviceStartStop();
 
-	@BeforeSuite
-	public void startAndroidDevices() throws IOException, InterruptedException {
-		AVD_DeviceStartStop.getDevicesNames();
-		System.out.println(CircularQueue.size);
-		semaphore = new Semaphore(CircularQueue.size);
-		// EmulatorStarter.start();
-	}
-
 	public AppiumDriverLocalService getService() {
 		return this.service.get();
 	}
@@ -66,20 +58,25 @@ public abstract class BaseTest {
 		this.dateTime.set(dateTime);
 	}
 
+	@BeforeSuite
+	public void startAndroidDevices() throws IOException, InterruptedException {
+		AVD_DeviceStartStop.getDevicesNames();
+		System.out.println(CircularQueue.size);
+		semaphore = new Semaphore(CircularQueue.size);
+		// EmulatorStarter.start();
+	}
+
 	@BeforeClass
 	public void startServer() throws Exception {
 		startAppiumServer("127.0.0.1", 4723);
-
 	}
 
 	@BeforeMethod
 	public void startDriver(ITestContext context) throws Exception {
-
 		semaphore.acquire();
 		setDriver(new DriverManager().initDriver());
 		setDateTime(Common_Functions.dateTime());
 		setITestContext(context);
-
 	}
 
 	@AfterMethod
@@ -88,7 +85,6 @@ public abstract class BaseTest {
 		CircularQueue.enQueue(getDriver().getCapabilities().getCapability("avd").toString());
 		getDriver().quit();
 		semaphore.release();
-
 	}
 
 	@AfterClass
@@ -118,10 +114,11 @@ public abstract class BaseTest {
 		return data;
 	}
 
-	private void setITestContext(ITestContext context) {
+	public void setITestContext(ITestContext context) {
 		// TODO Auto-generated method stub
 		System.out.println(getDriver());
 		context.setAttribute("AppiumDriver", getDriver());
 		context.setAttribute("DateTime", getDateTime());
 	}
+
 }

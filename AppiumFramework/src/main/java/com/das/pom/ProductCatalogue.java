@@ -18,25 +18,23 @@ public class ProductCatalogue extends AndroidActions {
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='ADD TO CART']")
 	private List<WebElement> addToCart;
-	// driver.findElements(By.xpath("//android.widget.TextView[@text='ADD TO
-	// CART']"))
+
 	@AndroidFindBy(id = "com.androidsample.generalstore:id/appbar_btn_cart")
 	private WebElement cart;
 
 	public ProductCatalogue(AppiumDriver driver) {
-		super(driver);
+		super((AndroidDriver) driver);
 		this.driver = (AndroidDriver) driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this); //
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
 	}
 
 	public void addItemToCartByIndex(int index) {
-		addToCart.get(index).click();
-
+		clickByIndex(addToCart, index, "Clicking on AddToCart");
 	}
 
 	public void goToCartPage() throws InterruptedException {
-		cart.click();
+		click(cart, "Click on cart button");
 		Thread.sleep(2000);
 
 	}

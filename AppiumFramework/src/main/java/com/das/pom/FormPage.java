@@ -17,7 +17,7 @@ public class FormPage extends AndroidActions {
 	AndroidDriver driver;
 
 	public FormPage(AppiumDriver driver) {
-		super(driver);
+		super((AndroidDriver) driver);
 		this.driver = (AndroidDriver) driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this); //
 
@@ -25,11 +25,9 @@ public class FormPage extends AndroidActions {
 
 	@AndroidFindBy(id = "com.androidsample.generalstore:id/nameField")
 	private WebElement nameField;
-	// driver.findElement(By.id("com.androidsample.generalstore:id/nameField"))
 
 	@AndroidFindBy(xpath = "//android.widget.RadioButton[@text='Female']")
 	private WebElement femaleOption;
-	// driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']"))
 
 	@AndroidFindBy(xpath = "//android.widget.RadioButton[@text='Male']")
 	private WebElement maleOption;
@@ -41,7 +39,7 @@ public class FormPage extends AndroidActions {
 	private WebElement shopButton;
 
 	public void setNameField(String name) {
-		nameField.sendKeys(name);
+		sendKeys(nameField, name, "Entering Name");
 		driver.hideKeyboard();
 
 	}
@@ -54,24 +52,21 @@ public class FormPage extends AndroidActions {
 
 	public void setGender(String gender) {
 		if (gender.equalsIgnoreCase("female"))
-			femaleOption.click();
+			click(femaleOption, "Clicking on Gender Female");
 		else
-			maleOption.click();
+			click(maleOption, "Clicking on Gender Male");
 
 	}
 
-	public void setCountrySelection(String countryName)
-
-	{
-		countrySelection.click();
+	public void setCountrySelection(String countryName) {
+		click(countrySelection, "Clicking on Country Selection");
 		scrollToText(countryName);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='" + countryName + "']")).click();
 
 	}
 
 	public void submitForm() {
-		shopButton.click();
-
+		click(shopButton, "Clicking on Shop Button");
 	}
 
 }

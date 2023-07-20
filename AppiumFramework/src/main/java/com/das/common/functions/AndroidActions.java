@@ -7,18 +7,19 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
-public class AndroidActions {
+public class AndroidActions extends CommonActions {
 
-	AppiumDriver driver;
+	AndroidDriver driver;
 
-	public AndroidActions(AppiumDriver driver) {
-
+	public AndroidActions(AndroidDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
-	public void longPressAction(WebElement ele) {
+	public void longPressAction(WebElement ele, String elementName) {
+		log().info("Long press on element " + elementName);
 		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
 				ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration", 2000));
 	}
@@ -34,7 +35,7 @@ public class AndroidActions {
 //	}
 
 	public void scrollToText(String text) {
-
+		log().info("Scrolling to text- " + text);
 		driver.findElement(AppiumBy
 				.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));"));
 	}

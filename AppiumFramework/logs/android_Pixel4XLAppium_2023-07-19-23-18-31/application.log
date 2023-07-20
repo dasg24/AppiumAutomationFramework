@@ -1,0 +1,12 @@
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:38.408 CommonActions:56 - Entering Name Roger Smith
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:39.617 CommonActions:39 - Clicking on Gender Male
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:40.224 CommonActions:39 - Clicking on Country Selection
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:40.301 AndroidActions:38 - Scrolling to text- Austria
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:46.498 CommonActions:39 - Clicking on Shop Button
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:47.910 CommonActions:45 - Clicking on AddToCart
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:48.546 CommonActions:45 - Clicking on AddToCart
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:49.156 CommonActions:39 - Click on cart button
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:52.497 AndroidActions:22 - Long press on element terms
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:54.651 CommonActions:39 - Click on Accept Button
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:55.369 CommonActions:39 - Click on checkbox
+[logsandroid_Pixel4XLAppium_2023-07-19-23-18-31 INFO ] 2023-07-19 23:18:56.190 CommonActions:39 - Click on proceed

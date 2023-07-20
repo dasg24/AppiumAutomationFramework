@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.das.validation.ECommerceValidationExcell">
+      <class name="com.das.validation.ECommerceValidation">
         <methods>
           <include name="stopDeviceAndServer"/>
-          <include name="FillForm" invocation-numbers="0"/>
           <include name="tearDownDriver"/>
           <include name="startServer"/>
+          <include name="FillForm"/>
           <include name="startAndroidDevices"/>
           <include name="startDriver"/>
         </methods>
-      </class> <!-- com.das.validation.ECommerceValidationExcell -->
+      </class> <!-- com.das.validation.ECommerceValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

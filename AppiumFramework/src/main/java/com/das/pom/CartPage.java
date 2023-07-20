@@ -17,7 +17,7 @@ public class CartPage extends AndroidActions {
 	AndroidDriver driver;
 
 	public CartPage(AppiumDriver driver) {
-		super(driver);
+		super((AndroidDriver) driver);
 		this.driver = (AndroidDriver) driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
@@ -65,14 +65,13 @@ public class CartPage extends AndroidActions {
 
 	public void acceptTermsConditions() {
 		System.out.println("terms " + terms);
-		longPressAction(terms);
-		acceptButton.click();
-
+		longPressAction(terms, "terms");
+		click(acceptButton, "Click on Accept Button");
 	}
 
 	public void submitOrder() {
-		checkBox.click();
-		proceed.click();
+		click(checkBox, "Click on checkbox");
+		click(proceed, "Click on proceed");
 	}
 
 }
