@@ -5,8 +5,10 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.Status;
 import com.das.common.functions.AndroidActions;
 import com.das.common.functions.Common_Functions;
+import com.das.utils.ExtentReport;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -20,6 +22,7 @@ public class CartPage extends AndroidActions {
 		super((AndroidDriver) driver);
 		this.driver = (AndroidDriver) driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		ExtentReport.getTest().log(Status.INFO, "<h2 style=\"color:red;\">Cart Page</h2>");
 	}
 
 	// driver.findElements(By.id("com.androidsample.generalstore:id/productPrice"))
