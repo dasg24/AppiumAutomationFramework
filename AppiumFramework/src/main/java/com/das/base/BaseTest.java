@@ -76,7 +76,10 @@ public abstract class BaseTest {
 		semaphore.acquire();
 		setDriver(new DriverManager().initDriver());
 		setDateTime(Common_Functions.dateTime());
-		setITestContext(context);
+		context.setAttribute("AppiumDriver", getDriver());
+		context.setAttribute("DateTime", getDateTime());
+		context.setAttribute("PlatformName", getDriver().getCapabilities().getCapability("platformName").toString());
+		context.setAttribute("ThreadName", getDriver().getCapabilities().getCapability("threadName").toString());
 	}
 
 	@AfterMethod
@@ -113,14 +116,4 @@ public abstract class BaseTest {
 				});
 		return data;
 	}
-
-	public void setITestContext(ITestContext context) {
-		// TODO Auto-generated method stub
-		System.out.println(getDriver());
-		context.setAttribute("AppiumDriver", getDriver());
-		context.setAttribute("DateTime", getDateTime());
-		context.setAttribute("PlatformName", getDriver().getCapabilities().getCapability("platformName").toString());
-		context.setAttribute("ThreadName", getDriver().getCapabilities().getCapability("threadName").toString());
-	}
-
 }

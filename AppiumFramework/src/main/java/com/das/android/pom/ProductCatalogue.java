@@ -1,4 +1,4 @@
-package com.das.pom;
+package com.das.android.pom;
 
 import java.util.List;
 

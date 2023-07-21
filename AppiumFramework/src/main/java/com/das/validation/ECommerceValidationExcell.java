@@ -4,12 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.das.android.pom.CartPage;
+import com.das.android.pom.FormPage;
+import com.das.android.pom.ProductCatalogue;
 import com.das.base.BaseTest;
 import com.das.base.DataDrivenExcel;
 import com.das.pojo.CustomerInfo;
-import com.das.pom.CartPage;
-import com.das.pom.FormPage;
-import com.das.pom.ProductCatalogue;
 
 public class ECommerceValidationExcell extends BaseTest {
 
