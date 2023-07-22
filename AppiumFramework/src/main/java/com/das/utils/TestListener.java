@@ -18,6 +18,7 @@ import org.testng.Reporter;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.das.base.BaseTest;
+import com.das.base.MapDrivers;
 
 import io.appium.java_client.AppiumDriver;
 
@@ -33,8 +34,10 @@ public class TestListener extends BaseTest implements ITestListener {
 			result.getThrowable().printStackTrace(pw);
 		}
 
+		MapDrivers mapDrivers = new MapDrivers();
+		driver.set(mapDrivers.getCurrentDriver(Thread.currentThread().getId()));
+
 		ITestContext context = result.getTestContext();
-		driver.set((AppiumDriver) context.getAttribute("AppiumDriver"));
 		dateTime.set((String) context.getAttribute("DateTime"));
 
 		System.out.println(getDriver());
@@ -75,7 +78,6 @@ public class TestListener extends BaseTest implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		ITestContext context = result.getTestContext();
-		driver.set((AppiumDriver) context.getAttribute("AppiumDriver"));
 		dateTime.set((String) context.getAttribute("DateTime"));
 		ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
 				.assignCategory(context.getAttribute("PlatformName") + "_" + context.getAttribute("ThreadName"));

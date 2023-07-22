@@ -76,6 +76,8 @@ public abstract class BaseTest {
 		semaphore.acquire();
 		setDriver(new DriverManager().initDriver());
 		setDateTime(Common_Functions.dateTime());
+		MapDrivers mapDrivers = new MapDrivers();
+		mapDrivers.addElement(getDriver());
 		context.setAttribute("AppiumDriver", getDriver());
 		context.setAttribute("DateTime", getDateTime());
 		context.setAttribute("PlatformName", getDriver().getCapabilities().getCapability("platformName").toString());
