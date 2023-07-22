@@ -1,0 +1,4 @@
+[logs2023-07-22-14-49-21_16 INFO ] 2023-07-22 14:49:24.307 BasePage:79 - Entering email id testuser3@gmail.com
+[logs2023-07-22-14-49-21_16 INFO ] 2023-07-22 14:49:24.488 BasePage:79 - Entering password testuser
+[logs2023-07-22-14-49-21_16 INFO ] 2023-07-22 14:49:24.607 BasePage:60 - Clicking on login button
+[logs2023-07-22-14-49-21_16 INFO ] 2023-07-22 14:49:27.436 BasePage:60 - Clicking on order link

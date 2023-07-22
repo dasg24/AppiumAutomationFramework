@@ -1,0 +1,12 @@
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:24.115 CommonActions:60 - Entering Name Gourav Das
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:25.597 CommonActions:41 - Clicking on Gender Male
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:26.282 CommonActions:41 - Clicking on Country Selection
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:26.425 AndroidActions:41 - Scrolling to text- Argentina
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:28.544 CommonActions:41 - Clicking on Shop Button
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:30.183 CommonActions:48 - Clicking on AddToCart
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:31.024 CommonActions:48 - Clicking on AddToCart
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:31.762 CommonActions:41 - Click on cart button
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:34.201 AndroidActions:24 - Long press on element terms
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:36.522 CommonActions:41 - Click on Accept Button
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:37.394 CommonActions:41 - Click on checkbox
+[logsandroid_Pixel4XLAppium_2023-07-22-07-56-10 INFO ] 2023-07-22 07:56:38.140 CommonActions:41 - Click on proceed
